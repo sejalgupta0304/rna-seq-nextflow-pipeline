@@ -4,6 +4,7 @@ include { FASTQC } from './modules/fastqc'
 include { FASTP } from './modules/fastp'
 include { HISAT2 } from './modules/hisat2'
 include { FEATURECOUNTS } from './modules/featurecounts'
+include { DESEQ2 } from './modules/deseq2'
 
 workflow {
 
@@ -15,5 +16,7 @@ workflow {
 
     aligned_bam = HISAT2(trimmed_reads)
 
-    FEATURECOUNTS(aligned_bam)
+    counts = FEATURECOUNTS(aligned_bam)
+
+    DESEQ2(counts)
 }
