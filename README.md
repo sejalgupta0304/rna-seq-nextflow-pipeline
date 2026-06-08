@@ -52,10 +52,6 @@ DESEQ2
 ---
 
 ## Repository Structure
-
-```text
-rna-seq-nextflow-pipeline/
-
 ├── main.nf
 
 ├── modules/
@@ -63,15 +59,20 @@ rna-seq-nextflow-pipeline/
 │   ├── fastp.nf
 │   ├── hisat2.nf
 │   ├── featurecounts.nf
-│   └── deseq2.nf
+│   ├── deseq2.nf
+│   ├── go_enrichment.nf
+│   ├── kegg_enrichment.nf
+│   ├── volcano_plot.nf
+│   └── heatmap.nf
 
 ├── scripts/
-│   └── deseq2_analysis.R
+│   ├── deseq2_analysis.R
+│   ├── go_analysis.R
+│   ├── kegg_analysis.R
+│   ├── volcano_plot.R
+│   └── heatmap.R
 
 └── README.md
-```
-
----
 
 ## Nextflow Modules
 
@@ -123,11 +124,6 @@ results/
 - KEGG Pathway Analysis
 - Volcano Plot Generation
 - Heatmap Visualization
-- MultiQC Integration
-- Docker Containerization
-- Singularity Support
-- Cloud Execution Support
-
 ---
 
 ## Author
