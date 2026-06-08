@@ -1,3 +1,5 @@
+#!/usr/bin/env Rscript
+
 library(clusterProfiler)
 library(org.Mm.eg.db)
 
