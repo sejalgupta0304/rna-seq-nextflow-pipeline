@@ -1,3 +1,5 @@
+#!/usr/bin/env Rscript
+
 library(DESeq2)
 
 args <- commandArgs(trailingOnly = TRUE)
